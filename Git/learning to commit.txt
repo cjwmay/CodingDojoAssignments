@@ -1,0 +1,57 @@
+Last login: Mon Mar 20 16:52:08 on ttys000
+jingwens-MacBook-Pro:~ jingwen$ cd desktop
+jingwens-MacBook-Pro:desktop jingwen$ mkdir gittest
+jingwens-MacBook-Pro:desktop jingwen$ cd gittest
+jingwens-MacBook-Pro:gittest jingwen$ git init
+Initialized empty Git repository in /Users/jingwen/Desktop/gittest/.git/
+jingwens-MacBook-Pro:gittest jingwen$ touch index.html
+jingwens-MacBook-Pro:gittest jingwen$ touch style.css
+jingwens-MacBook-Pro:gittest jingwen$ touch aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ git add index.html
+jingwens-MacBook-Pro:gittest jingwen$ git add style.css
+jingwens-MacBook-Pro:gittest jingwen$ git add aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ git commit -m"add files"
+[master (root-commit) 19385cc] add files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 style.css
+jingwens-MacBook-Pro:gittest jingwen$ git add aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ git commit -m"update aboutMe"
+[master c75738f] update aboutMe
+ 1 file changed, 1 insertion(+)
+jingwens-MacBook-Pro:gittest jingwen$ git add aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ git commit -m"add movie aboutMe"
+[master 4bdd32a] add movie aboutMe
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+jingwens-MacBook-Pro:gittest jingwen$ git log
+commit 4bdd32a212e7493908cba2750e0168745c52be93
+Author: Your Name <your_name@examp>
+Date:   Mon Mar 20 17:01:08 2017 -0700
+
+    add movie aboutMe
+
+commit c75738f59acb8b073dc16b61bb75207ce9ef5ca3
+Author: Your Name <your_name@examp>
+Date:   Mon Mar 20 16:58:54 2017 -0700
+
+    update aboutMe
+
+commit 19385ccbbda527f3c7f531b0124c074ac94f3517
+Author: Your Name <your_name@examp>
+Date:   Mon Mar 20 16:56:30 2017 -0700
+
+    add files
+jingwens-MacBook-Pro:gittest jingwen$ git revert HEAD
+[master ac95b30] Revert "add movie aboutMe"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+jingwens-MacBook-Pro:gittest jingwen$ ls
+aboutMe.txt	index.html	style.css
+jingwens-MacBook-Pro:gittest jingwen$ vim aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ add aboutMe.txt
+-bash: add: command not found
+jingwens-MacBook-Pro:gittest jingwen$ git add aboutMe.txt
+jingwens-MacBook-Pro:gittest jingwen$ git commit -m"update book"
+[master 8a8cce6] update book
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+jingwens-MacBook-Pro:gittest jingwen$ 

@@ -1,0 +1,22 @@
+jingwens-MacBook-Pro:~ jingwen$ cd desktop
+jingwens-MacBook-Pro:desktop jingwen$ mkdir test
+jingwens-MacBook-Pro:desktop jingwen$ cd test
+jingwens-MacBook-Pro:test jingwen$ touch index.html
+jingwens-MacBook-Pro:test jingwen$ touch style.css
+jingwens-MacBook-Pro:test jingwen$ touch commands.txt
+jingwens-MacBook-Pro:test jingwen$ cp index.html index_2.html
+jingwens-MacBook-Pro:test jingwen$ rm style.css
+jingwens-MacBook-Pro:test jingwen$ cd ..
+jingwens-MacBook-Pro:desktop jingwen$ mkdir destination
+jingwens-MacBook-Pro:desktop jingwen$ cd test
+jingwens-MacBook-Pro:test jingwen$ mv index_2.html ../destination/index_2.html
+jingwens-MacBook-Pro:test jingwen$ ls
+commands.txt	index.html
+jingwens-MacBook-Pro:test jingwen$ cd ../destination
+jingwens-MacBook-Pro:destination jingwen$ ls
+index_2.html
+jingwens-MacBook-Pro:destination jingwen$ ..
+-bash: ..: command not found
+jingwens-MacBook-Pro:destination jingwen$ cd ..
+jingwens-MacBook-Pro:desktop jingwen$ rm -R destination
+jingwens-MacBook-Pro:desktop jingwen$
