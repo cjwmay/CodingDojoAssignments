@@ -1,0 +1,109 @@
+Last login: Tue Mar 21 16:24:13 on ttys000
+jingwens-MacBook-Pro:~ jingwen$ cd desktop
+jingwens-MacBook-Pro:desktop jingwen$ cd codingdojo
+jingwens-MacBook-Pro:codingdojo jingwen$ cd CodingDojoAssignments
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git init
+Reinitialized existing Git repository in /Users/jingwen/Desktop/codingdojo/CodingDojoAssignments/.git/
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git remote add origin https://github.com/cjwmay/CodingDojoAssignments.git
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git push -u origin master
+Username for 'https://github.com': cjwmay
+Password for 'https://cjwmay@github.com':
+mdmmremote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/cjwmay/CodingDojoAssignments.git/'
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git push -u origin master
+Username for 'https://github.com': cjwmay
+Password for 'https://cjwmay@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/cjwmay/CodingDojoAssignments.git/'
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git push -u origin master
+Username for 'https://github.com': cjwmay
+Password for 'https://cjwmay@github.com':
+Counting objects: 52, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (51/51), done.
+Writing objects: 100% (52/52), 6.47 MiB | 2.67 MiB/s, done.
+Total 52 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/cjwmay/CodingDojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ touch readme.md
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git commit -m"readme"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git commit git status
+error: pathspec 'git' did not match any file(s) known to git.
+error: pathspec 'status' did not match any file(s) known to git.
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git commit -m"readme change"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git add .
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   readme.md
+
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git commit -m"edit readme"
+[master 38d0619] edit readme
+ 1 file changed, 1 insertion(+)
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git log
+commit 38d06199d4003199ed043f0ac6be4097eaf88806
+Author: Your Name <cjwmay@live.cn>
+Date:   Tue Mar 21 17:20:59 2017 -0700
+
+    edit readme
+
+commit 3e7b8f7cbc07d1ed75eaca4f595e4ae640dabf11
+Author: Your Name <cjwmay@live.cn>
+Date:   Tue Mar 21 16:35:33 2017 -0700
+
+    add read.me
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 266 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/cjwmay/CodingDojoAssignments.git
+   3e7b8f7..38d0619  master -> master
+jingwens-MacBook-Pro:CodingDojoAssignments jingwen$
