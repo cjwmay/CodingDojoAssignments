@@ -1,0 +1,182 @@
+*{
+  margin:0;
+  padding: 0;
+}
+.container{
+  width: 900px;
+  margin: auto;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: .7%;
+  font-size: 14px;
+}
+
+/*header*/
+.header{
+  position: relative;
+}
+.header img{
+  width: 23%;
+  padding: 1%;
+
+}
+.header .call{
+  position: absolute;
+  right: 2%;
+  top:20px;
+  font-size: 12px;
+}
+.call p, a{
+  display: inline-block;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+.header .navegation{
+  background-color: #1c1c1c;
+  background: -webkit-linear-gradient(#515151, #414141, #1c1c1c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#515151, #414141, #1c1c1c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#515151, #414141, #1c1c1c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#515151, #414141, #1c1c1c); /* Standard syntax */
+  padding: 1%;
+  margin-top: .7%;
+}
+.navegation a{
+  padding: 4px 20px 5px 20px;
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #a8a5a2;
+  font-weight: bolder;
+  border-right: 2.5px solid #414141;
+}
+.navegation a:hover{
+  color: #f0f0f0;
+}
+
+/*intro*/
+#hero{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 4px solid #363636;
+}
+.intro{
+  padding: 0 0.9%;
+}
+.content{
+  width: 16.67%;
+  padding: 0 0 0 1%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 32px;
+}
+.content h3{
+  color: #f67e36;
+}
+.intro img{
+  width: 5%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.6%;
+  margin-top: 27px;
+}
+.intro p{
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: lighter;
+  line-height: 16px;
+}
+
+
+/*buynow*/
+
+.buynow{
+  background: repeating-linear-gradient(
+  -45deg,
+  #1a1a1a,
+  #1a1a1a 2px,
+  #000000 2px,
+  #000000 4px
+);
+  padding: 30px;
+  margin-top: 35px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  position: relative;
+}
+.buynow p{
+  font-size: 11px;
+  line-height: 16px;
+  width: 70%;
+  margin-top: 10px;
+}
+.buynow button{
+  position: absolute;
+  width: 110px;
+  height: 35px;
+  right: 50px;
+  top: 42.5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #f0f0f0;
+  background-color: #ef8846;
+  background: -webkit-linear-gradient(#f3ae81, #f08f51, #f3ae81); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f3ae81, #f08f51, #f3ae81); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f3ae81, #f08f51, #f3ae81); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f3ae81, #f08f51, #f3ae81); /* Standard syntax */
+  border: none;
+}
+
+/*protfolio*/
+
+.protfolio{
+  padding: 20px 10px 0 10px;
+  position: relative;
+}
+.protfolio a{
+  position: absolute;
+  top:30px;
+  right: 20px;
+  font-size: 11px;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: #f67e36;
+}
+.protfolio h3{
+  padding: 10px 0;
+  margin-left: 10px;
+}
+.project img{
+  width: 96%;
+  border: 4px solid #363636;
+}
+.project{
+  width: 22.4%;
+  display: inline-block;
+  margin: 10px;
+}
+.project h4{
+  line-height: 35px;
+  color: #f67e36;
+}
+.project p{
+  font-size: 11px;
+  line-height: 16px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+/*footer*/
+.footer a{
+  font-size: 8px;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-family: sans-serif;
+  color: #6a6767;
+  text-decoration: none;
+  display: block;
+
+}

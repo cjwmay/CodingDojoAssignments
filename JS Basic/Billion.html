@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>For a Few Billion</title>
+    <script type="text/javascript">
+      function Billion(n) {
+        n=1;
+        var money=1;
+        while (n<=30000000){
+          money=money*2;
+          n++;
+          if(money>=Infinity){
+            console.log(n);
+            break;
+          }
+        }
+        console.log(money);
+      }
+      Billion(300000000);
+      console.log(Infinity);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

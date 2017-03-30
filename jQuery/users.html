@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    function showData(){
+      $("#table tr:last").after("<tr><tr>");
+    }
+
+    $(document).ready(function(){
+      //console.log('Hi');
+
+      $("#submit").click(function(){
+        if (fname && lname && email && telnum) {
+          showData();
+          var fname= $("#txtfirstname").val();
+          var lname= $("#txtlastname").val();
+          var email= $("#txtemail").val();
+          var telnum= $("#txttel").val();
+
+
+          $("#table tr:last").append('<td>'+fname+'</td>','<td>'+lname+'</td>','<td>'+email+'</td>','<td>'+telnum+'</td>');
+
+        }
+      else {
+        alert("Plase fill in all info!!");
+      }
+
+      $('form').submit(function(){
+        return false;
+      });
+        // console.log(email);
+      });
+    });
+    </script>
+    <style media="screen">
+      th{
+        border: 1px solid black;
+      }
+    </style>
+    <title>Users</title>
+  </head>
+  <body>
+    <div class="container">
+      <table id="table">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact#</th>
+          </tr>
+      </table>
+
+      <h1>Add User</h1>
+      <br>
+
+      <form class="" action="index.html" method="post" autofocus>
+        <label for="">First Name:</label>
+        <input type="text" id="txtfirstname" placeholder="First Name" autofocus>
+        <label for="">Last Name:</label>
+        <input type="text" id="txtlastname" placeholder="Last Name" autofocus>
+        <label for="">Email Address:</label>
+        <input type="email" id="txtemail" placeholder="Email Address" autofocus>
+        <label for="">Contact No.:</label>
+        <input type="tel" id="txttel" placeholder="Phone#">
+        <input type="submit" id="submit" value="Submit" autofocus >
+        <!-- onclick="showData();" -->
+      </form>
+    </div>
+
+  </body>
+</html>

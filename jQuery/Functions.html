@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // console.log("hi");
+
+        $(".box1 button").click(function(){
+          $(".box1 button~p").hide();
+        });
+        $(".box2 button").click(function(){
+          $(".box2 button~p").show();
+        });
+        $(".box3 button").click(function(){
+          $(".box3 button~p").toggle();
+        });
+        $(".box4 button").click(function(){
+          $(".box4 button~p").slideDown();
+        });
+        $(".box5 button").click(function(){
+          $(".box5 button~p").slideUp("slow");
+
+        });
+        $(".box6 button").click(function(){
+          $(".box6 button~p").slideToggle();
+        });
+        $(".box7 button").click(function(){
+          $(".box7 button~p").fadeIn();
+        });
+        $(".box8 button").click(function(){
+          $(".box8 button~p").fadeOut();
+        });
+        $(".box9 button").click(function(){
+          $(".box9 button~p").addClass("selected");
+        });
+        $(".box10 button").click(function(){
+          $(".box10 button~p").before("<br>Something<br>");
+        });
+        $(".box11 button").click(function(){
+          $(".box11 button~p").after("<br>Something<br>");
+        });
+        $(".box12 button").click(function(){
+          $(".box12 button~p").append("altText");
+        });
+        $(".box13 button").click(function(){
+          $(".box13 button~p").html("<h1>Something<h1>");
+        });
+        $(".box14 button").click(function(){
+          var title=$("em").attr("title");
+          $(".box14 button~p").text(title);
+
+        });
+        $(".box15 button").click(function(){
+          $(".box15 button~input").val("enter here");
+        });
+        $(".box16 button").click(function(){
+          $(".box16 button~p").text("hello");
+        });
+        $(".box17 button~p").data('coolColor', 'Orange');
+        $(".box17 button").click(function(){
+          alert($(".box17 button~p").data('coolColor'));
+        });
+
+
+
+      });
+    </script>
+    <style media="screen">
+      *{
+        margin: 0;
+      }
+      .container{
+        width: 960px;
+        margin: auto;
+      }
+      h1,button,p,input{
+        display: inline-block;
+        width: 30%;
+        margin: 1%;
+        vertical-align: middle;
+      }
+      .selected{
+        color: red;
+        background: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <button type="button" name="button">click button</button>
+        <h1>Hide</h1>
+        <p>Click the button to hide this paragraph.</p>
+      </div>
+      <div class="box2">
+        <button type="button" name="button">click button</button>
+        <h1>Show</h1>
+        <p style="display:none">Click the button to show this paragraph.</p>
+      </div>
+      <div class="box3">
+        <button type="button" name="button">click button</button>
+        <h1>Toggle</h1>
+        <p style="display:none">Hello!!!!!</p>
+        <p>Hi!!!!!!!!!</p>
+      </div>
+      <div class="box4">
+        <button type="button" name="button">click button</button>
+        <h1>slideDown</h1>
+        <p style="display:none">DownDownDown</p>
+      </div>
+      <div class="box5">
+        <button type="button" name="button">click button</button>
+        <h1>slideUp</h1>
+        <p>UpUpUp</p>
+      </div>
+      <div class="box6">
+        <button type="button" name="button">click button</button>
+        <h1>SlideToggle</h1>
+        <p>Hi!!!!!!!!!</p>
+        <p style="display:none">Hello!!!!!!!</p>
+      </div>
+      <div class="box7">
+        <button type="button" name="button">click button</button>
+        <h1>FadeIn</h1>
+        <p style="display:none">Click the button to fadein this paragraph.</p>
+      </div>
+      <div class="box8">
+        <button type="button" name="button">click button</button>
+        <h1>FadeOut</h1>
+        <p>Click the button to fadeout this paragraph.</p>
+      </div>
+      <div class="box9">
+        <button type="button" name="button">click button</button>
+        <h1>addClass</h1>
+        <p>Click the button to addClass for this paragraph.</p>
+      </div>
+      <div class="box10">
+        <button type="button" name="button">click button</button>
+        <h1>Before</h1>
+        <p>Click the button to add something before this paragraph.</p>
+      </div>
+      <div class="box11">
+        <button type="button" name="button">click button</button>
+        <h1>After</h1>
+        <p>Click the button to add something after this paragraph.</p>
+      </div>
+      <div class="box12">
+        <button type="button" name="button">click button</button>
+        <h1>Append</h1>
+        <p>Click the button to add something at the end of this paragraph.</p>
+      </div>
+      <div class="box13">
+        <button type="button" name="button">click button</button>
+        <h1>Html</h1>
+        <p>Click the button to Change this paragraph.</p>
+      </div>
+      <div class="box14">
+        <button type="button" name="button">click button</button>
+        <h1>Attr</h1>
+        <p>Click the <em title="change">button to changethis</em> paragraph.</p>
+      </div>
+      <div class="box15">
+        <button type="button" name="button">click button</button>
+        <h1>Val</h1>
+        <input type="text" name="" value="hi">
+      </div>
+      <div class="box16">
+        <button type="button" name="button">click button</button>
+        <h1>Text</h1>
+        <p>Click the button to change the text here.</p>
+      </div>
+      <div class="box17">
+        <button type="button" name="button">click button</button>
+        <h1>Data</h1>
+        <p>Click the button to change here to be the same as Heading.</p>
+      </div>
+    </div>
+  </body>
+</html>

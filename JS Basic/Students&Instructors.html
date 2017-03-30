@@ -1,0 +1,62 @@
+;<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Students and Instructors</title>
+    <script type="text/javascript">
+    var students = [
+   {first_name:  'Michael', last_name : 'Jordan'},
+   {first_name : 'John', last_name : 'Rosales'},
+   {first_name : 'Mark', last_name : 'Guillen'},
+   {first_name : 'KB', last_name : 'Tonel'}
+]
+
+  function one(){
+    for(i=0;i<students.length;i++){
+        console.log(students[i].first_name,students[i].last_name);
+    }
+ }
+
+  one();
+
+  // function List(first_name,last_name){
+  //   this.first_name = first_name;
+  //   this.last_name = last_name;
+  // }
+  // var list1 = new List("Michael","Jordan");
+  // console.log(list1);
+
+
+  var users = {
+ 'Students': [
+     {first_name:  'Michael', last_name : 'Jordan'},
+     {first_name : 'John', last_name : 'Rosales'},
+     {first_name : 'Mark', last_name : 'Guillen'},
+     {first_name : 'KB', last_name : 'Tonel'}
+  ],
+ 'Instructors': [
+     {first_name : 'Michael', last_name : 'Choi'},
+     {first_name : 'Martin', last_name : 'Puryear'}
+  ]
+ }
+
+
+ function two(){
+   for (property in users){
+     console.log(property);
+     for (var i = 0; i < users[property].length; i++) {
+      console.log(i+"-"+users[property][i].first_name +" "+users[property][i].last_name + "-"+ (users[property][i].first_name.length+users[property][i].last_name.length));
+     }
+   }
+ }
+
+ two();
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

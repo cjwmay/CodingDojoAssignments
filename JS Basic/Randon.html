@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Chance</title>
+    <script type="text/javascript">
+      function random(quater,leave){
+        console.log("hi");
+           //for (var i=1;i<=quater;i++){
+            //console.log("I have", quater, "quarters")
+            while (quater>0){
+              var win= Math.trunc(Math.random()*100);
+              console.log("Played round #", quater);
+              quater--;
+             if(win==50){
+              console.log("I win!");
+              quater= quater + Math.trunc(Math.random()*51)+50;
+              if (quater>=leave){
+                console.log("hooray")
+                return quater;
+              }
+            }
+
+          }
+        return quater;
+    }
+
+      console.log(random(200,240));
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

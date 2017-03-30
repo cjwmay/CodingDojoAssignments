@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fancy Array</title>
+    <script type="text/javascript">
+    function Fancy(arr,symbol,reversed){
+
+      if (reversed){
+        for (i=arr.length-1;i>=0;i--){
+          console.log(i + symbol +arr[i]);
+        }
+      }
+      else {
+
+      for (i=0; i<arr.length;i++){
+        console.log(i + symbol + arr[i]);
+      }
+    }
+  }
+
+    Fancy(["Agnes", "Agatha", "Germaine","Jacq"],"----", 0);
+    // Fancy(["Agnes", "Agatha", "Germaine","Jacq"],"----", 1);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

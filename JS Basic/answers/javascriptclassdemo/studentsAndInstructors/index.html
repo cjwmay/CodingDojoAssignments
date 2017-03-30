@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>studentsAndInstructors</title>
+    <script type="text/javascript">
+
+    // Part 1 --------------------------------------------------------------
+    function part1(){
+      var students = [
+        {first_name:  'Michael', last_name : 'Jordan'},
+        {first_name : 'John', last_name : 'Rosales'},
+        {first_name : 'Mark', last_name : 'Guillen'},
+        {first_name : 'KB', last_name : 'Tonel'}
+      ];
+
+      // Iterate thru the array
+      for(var i=0; i<students.length; i++){
+        console.log(students[i].first_name + " " + students[i].last_name);
+      }
+    }
+    console.log("Part 1 ---------------");
+    part1();
+
+    // Part 2 --------------------------------------------------------------
+    function part2(){
+      var users = {
+        Students: [
+          {first_name:  'Michael', last_name : 'Jordan'},
+          {first_name : 'John', last_name : 'Rosales'},
+          {first_name : 'Mark', last_name : 'Guillen'},
+          {first_name : 'KB', last_name : 'Tonel'}
+        ],
+        Instructors: [
+          {first_name : 'Michael', last_name : 'Choi'},
+          {first_name : 'Martin', last_name : 'Puryear'}
+        ]
+      }
+
+      // Iterate thru each property in the object
+      for(property in users){
+        console.log(property);
+        // Iterate thru array
+        for(var i=0; i<users[property].length; i++){
+          console.log(i + " - " + users[property][i].first_name + " " + users[property][i].last_name + " - " + (users[property][i].first_name.length + users[property][i].last_name.length));
+        }
+      }
+
+
+
+    }
+    console.log("Part 2 ---------------");
+    part2();
+
+
+    // var obj = {
+    //   name: "Andy",
+    //   movie: "Matrix",
+    //   show: ["Black Mirror", "Expanse", "Game of Thrones"]
+    // }
+    //
+    // var obj2 = {
+    //   first: obj
+    // }
+    //
+    // console.log(obj2.first.show[1]);
+
+    // console.log(obj.show[0]);
+    // console.log(obj["show"][0]);
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

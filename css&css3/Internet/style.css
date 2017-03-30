@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*======================end of reset==========================*/
+
+
+
+.container{
+  width: 960px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: top;
+  display: flex;
+  flex-wrap: wrap;
+  background: grey; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(grey, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(grey, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(grey, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0)); /* For Firefox 3.6*/
+}
+span{
+  color: #00c4df !important;
+}
+.darkblue{
+  color: #276a9e !important;
+}
+#red{
+  color: red !important;
+}
+/*header*start*/
+.header{
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+.header img{
+  width: 80px;
+  position: absolute;
+}
+.header h1{
+  font-size: 2.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px 90px 6px 90px;
+}
+.header h2{
+  font-size: 1.70em;
+  color: #ffffff;
+  padding: 13px;
+  background: #5385ab; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#296c9e, #5385ab, #296c9e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#296c9e, #5385ab, #296c9e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#296c9e, #5385ab, #296c9e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#296c9e, #5385ab, #296c9e); /* Standard syntax */
+}
+
+
+/*sidebar start*/
+.sidebar{
+  width: 18%;
+  display: inline-block;
+  margin-left: 2px;
+}
+.sidebar h4{
+  margin: 20px 0 10px 0;
+  font-size: .85em;
+  font-weight: bolder;
+}
+.sidebar h5{
+  margin: 0 0 10px 0;
+  font-size: .7em;
+  font-weight: bolder;
+}
+.sidebar img{
+  max-width: 100%;
+}
+.sidebar button{
+  width: 98%;
+  font-size: 0.8em;
+  color: #ffffff;
+  line-height: 1.6em;
+  border-radius: 5px;
+  margin: 2px auto;
+  display: block
+}
+.side_ad{
+  position: relative;
+  padding-bottom: 8px;
+  margin-top: 50px;
+}
+.side_ad h3{
+  text-align: center;
+  color: #ffffff;
+  margin: 0 5px;
+  font-size: 1.15em;
+  line-height: 1.3em;
+}
+#ninja{
+  width: 45%;
+  margin: auto;
+  display: block;
+}
+#ad_background{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -11111;
+}
+.side_ad button{
+  margin: 10px auto;
+  width: 85%;
+  line-height: 1.2em;
+}
+
+
+
+/*content start*/
+.content{
+  width: 75%;
+  display: inline-block;
+  position: relative;
+  margin-left: 6%;
+
+}
+.content img{
+  max-width: 100%;
+}
+#home{
+  width: 15px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.content h3{
+  font-weight: bolder;
+  color:#2e6ea0;
+  padding: 6px 0;
+}
+.content p, .content li{
+  font-size: 0.8em;
+  margin: 7px 0;
+}
+.content ul{
+  margin-left: 30px;
+  list-style: initial;
+}
+.content ol{
+  margin-left: 30px;
+  list-style: decimal;
+}
+#serverimg{
+  width: 33%;
+  margin: auto;
+  display: block;
+}
+.box{
+  border-width: 4px 4px 0 4px;
+  border-color: #0088dd;
+  border-style: solid;
+  box-shadow: 2px 0 0 #888888;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 120px;
+}
+.box img{
+  width: 14%;
+  padding: 2%;
+  display: inline-block;
+}
+.box h3, .box p{
+  display: inline-block;
+  width: 75%;
+}
+
+/*info start*/
+.info{
+  width: 25%;
+  max-height: 50px;
+  position: absolute;
+  top:0px;
+  right: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+.info img{
+  width: 35px;
+  max-height: 40px;
+  padding: 9px 0;
+  display: inline-block;
+}
+.info a, .info p{
+  display: inline-block;
+  font-size: 9px;
+  padding: 0;
+  margin: 3px 5px;
+}
+.info a{
+  font-size: 1.2em;
+  color: #00c2de;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}

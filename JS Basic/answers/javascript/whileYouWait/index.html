@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>whileYouWait</title>
+    <script type="text/javascript">
+
+
+      // Define the countdown function
+      function countdown(days) {
+        for( ; days>=0 ; days--) {
+          if (days>=30) {
+            // Range ---> 30 to infinity
+            console.log(days + " days until my birthday. Such a long time... :(");
+          } else if (days >= 5) {
+            // Range ---> 5 to 29
+            console.log(days + " days until my birthday. Wooo!");
+          } else if (days >= 1) {
+            // Range ---> 1 to 4
+            console.log(days + " DAYS UNTIL MY BIRTHDAY. OMGOMG!!!!!!!!!!!!!!!!!!!");
+          } else {
+            // Range ---> 0
+            console.log("♪ღ♪*•.¸¸¸.•*¨¨*•.¸¸¸.•*•♪ღ♪¸.•*¨¨*•.¸¸¸.•*•♪ღ♪•*");
+            console.log("♪ღ♪░H░A░P░P░Y░ B░I░R░T░H░D░A░Y░░♪ღ♪");
+            console.log("*•♪ღ♪*•.¸¸¸.•*¨¨*•.¸¸¸.•*•♪¸.•*¨¨*•.¸¸¸.•*•♪ღ♪•«");
+          }
+        }
+      }
+
+      // Call the function and give a starting point
+      countdown(60);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

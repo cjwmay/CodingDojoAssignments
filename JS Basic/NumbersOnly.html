@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Numbers Only</title>
+    <script type="text/javascript">
+      function Numbers(arr){
+        // console.log("hi");
+        var newarr=[];
+        for (i=0;i<arr.length;i++){
+          if(typeof arr[i]==="number"){
+            newarr.push(arr[i]);
+          }
+        }
+        console.log(newarr);
+      }
+      Numbers([1,"ok",2,"ok",3]);
+
+      function Numbers2(arr2){
+        console.log("hi");
+        for (i=0;i<arr.length;i++){
+          if(typeof arr[i]==!"number"){
+            arr2.splice(i,1);
+          }
+        }
+        console.log(newarr);
+      }
+      Numbers([4,"ok",2,"ok",3,"No",5]);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

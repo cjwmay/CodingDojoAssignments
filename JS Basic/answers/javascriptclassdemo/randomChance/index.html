@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>randomChance</title>
+    <script type="text/javascript">
+
+      // 0 - 1
+      var rand = Math.random();
+      console.log(rand);
+
+      // 0 - 99
+      var hundred = rand * 100;
+      console.log(hundred);
+
+      // make the random number an integer
+      var int = Math.floor(hundred);
+      console.log(int);
+
+      // Test math.random
+      // console.log(Math.random(50) * 100);
+
+
+
+
+
+      // ======== Start the assignment ===========
+
+      // Make a function that takes in a number of quarters
+      function play(quarters, min){
+        console.log("I started with " + quarters + " quarters");
+
+        // One quarter = one game
+        // We will play quarter times
+        for(; quarters > 0; quarters--){
+
+          // Roll the dice and get a number between 0 and 99
+          var diceRoll = Math.floor(Math.random() * 100);
+          console.log(diceRoll);
+
+          // Make a 1 in 100 chance of something happening
+          if( diceRoll == 11 ){
+            // win
+            console.log("winner winner chicken dinner! I have " + quarters + " quarters left.");
+
+            // Generate a number between 50 to 100
+            var winnings = Math.floor(Math.random() * 51) + 50;
+            console.log("The winnings are: " + winnings );
+
+            // Add that amount to the remaining quarters
+            quarters += winnings;
+
+            // Exit the function and return the quarters if it meets the min
+            if(quarters > min){
+              // Cash out since i have enough quarters
+              return quarters;
+            }
+          }
+        }
+        // Out of quarters
+        console.log("Out of quarters");
+        return quarters;
+      }
+
+      // Run the function
+      console.log(play(50, 90));
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ContactCard</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+
+    //console.log(description);
+    $(document).ready(function(){
+
+
+      $("#submit").on("click",function(){
+        var fname=$("#txtfname").val();
+        var lname=$("#txtlname").val();
+        var description=$("#txtdescription").val();
+
+        if(fname&&lname&&description){
+        //console.log(fname);
+
+        $(".right").append("<div class='card'>"+fname+lname+'<button>Click here for description</button>'+"</div>");
+        $(".card").on("click",function change(){
+          $(this).html(description + '<button id="b2">Back</button>');
+          $("button").on("click",function changeback(event){
+            event.stopPropagation();
+            console.log(this);
+            $(this).parent().html(fname+lname+'<button>Click here for description</button>');
+          });
+
+        });
+      }
+      else {
+        alert("Plase fill in all info!!");
+      }
+        console.log("hi");
+        $('form').submit(function(){
+          return false;
+        });
+
+
+
+
+      });
+    });
+
+    </script>
+    <style media="screen">
+    .container{
+      width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 80px;
+      position: relative;
+    }
+    .left{
+      width: 29%;
+      display: inline-block;
+    }
+    .right{
+      width: 70%;
+      display: inline-block;
+    }
+    h1{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      text-align: center;
+    }
+    label, input, textarea{
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .card{
+      width: 50%;
+      height: 200px;
+      margin: 50px;
+      margin: auto;
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+    .card button{
+      font-size: 14px;
+      border-radius: 5px;
+      display: block;
+      margin: 50px auto;
+
+    }
+    .card button:hover{
+      opacity: .6;
+    }
+    div{
+      /*border: 1px solid red;*/
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Contact Card</h1>
+      <div class="left">
+        <form class="" id="contactform" action="index.html" method="post" autofocus>
+          <label for="">First Name:</label>
+          <input type="text" id="txtfname" name="" placeholder="First name" autofocus>
+          <label for="">Last Name:</label>
+          <input type="text" id="txtlname" name="" placeholder="Last name" autofocus>
+          <label for="">Description</label>
+          <textarea name="textarea" id="txtdescription" cols="40" rows="5" placeholder="Enter description here..." autofocus></textarea>
+          <input type="submit" id="submit" name="" value="Add User">
+        </form>
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+
+  </body>
+</html>

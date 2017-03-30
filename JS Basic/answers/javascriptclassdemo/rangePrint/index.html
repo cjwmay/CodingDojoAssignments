@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rangePrint</title>
+    <script type="text/javascript">
+
+      function rangePrint(start, end, skip){
+        // Handle case if skip is not given (Bonus)
+        if(!skip){
+          skip = 1;
+        }
+
+        // Handle case if only one argument is given (Bonus)
+        if(arguments.length == 1){
+          end = start;
+          start = 0;
+        }
+
+        if(start < end){
+          // Going forward
+          for(var i=start; i<end; i+=skip){
+            console.log(i);
+          }
+        } else {
+          // Going backwards (Bonus)
+          for(var j=start; j>end; j-=skip){
+            console.log(j);
+          }
+        }
+
+        console.log("-----------------");
+      }
+
+      // Test cases
+      rangePrint(2, 10, 2);
+      rangePrint(-2, -10, 2);
+      rangePrint(-2, -10);
+      rangePrint(4);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Range Print</title>
+    <script type="text/javascript">
+      function RangePrint(a,b,c){
+
+        if (c==null){
+          c=1;
+        }
+        if (b==null){
+          b=a;
+          a=0;
+        }
+        while (a<b){
+          console.log(a);
+          a+=c;
+        }
+        while (a>b){
+          console.log(a)
+          a-=c;
+        }
+        while (a=b){
+          console.log(a);
+          break;
+        }
+      }
+
+      RangePrint(3,33);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
