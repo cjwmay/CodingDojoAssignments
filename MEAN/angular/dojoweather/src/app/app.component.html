@@ -1,0 +1,20 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Dojo Weather Forecast!!
+  </h1>
+  <div>
+  <a (click)='getTasks("seattle")' [routerLink]="['/']">Seattle</a>
+<a (click)='getTasks("burbank")' [routerLink]="['/burbank']">Burbank</a>
+<a (click)='getTasks("chicago")'[routerLink]="['/chicago']">Chicago</a>
+<a (click)='getTasks("sanjose")' [routerLink]="['/sanjose']">San Jose</a>
+<a (click)='getTasks("washington")' [routerLink]="['/washington']">Washington</a>
+<a (click)='getTasks("dallas")' [routerLink]="['/dallas']">Dallas</a>
+  
+</div>
+<p>{{tasks|json}}</p>
+</div>
+
+
+
+<router-outlet></router-outlet>

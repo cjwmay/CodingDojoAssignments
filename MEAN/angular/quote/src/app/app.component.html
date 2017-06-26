@@ -1,0 +1,19 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Add a Quote
+  </h1>
+  <form (submit)="onSubmit()">
+  <p>Quote:<textarea rows="10" cols="100" name="quote" required minlength="4" [(ngModel)]="quotes.quote"  #quote='ngModel'></textarea></p>
+  <p *ngIf='!quote.valid'>minlength:4</p>
+  
+  <p>Author:<input type="text" name="author" required minlength="1" [(ngModel)]="quotes.author" #author='ngModel' /></p>
+  <p *ngIf='!author.valid'>minlength:1</p>
+  <p *ngIf='author.valid && quote.valid'><input type="submit"></p>
+  
+</form>
+<app-quotes [quotes] = 'quotesarr' (voteEmitter)="vote($event)" (downEmitter)="down($event)" (deleteEmitter)="delete($event)"></app-quotes>
+</div>
+
+
+

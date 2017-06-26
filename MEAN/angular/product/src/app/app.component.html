@@ -1,0 +1,14 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Product Management
+  </h1>
+  <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/products']">Products List</a>
+  <a [routerLink]="['/products','new']" >Products Creation</a>
+  <a [routerLink]="['/products','edit','1']" >Products 1</a>
+</div>
+<p>{{products | json}}</p>
+
+
+<router-outlet></router-outlet>

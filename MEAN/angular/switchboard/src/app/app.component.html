@@ -1,0 +1,11 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+    <div class="bar">
+      <div class="box" *ngFor='let item of array; let i = index'><button (click)='switch(i)' [ngStyle]="{'background-color': color[i]}">{{item}}</button></div>
+
+
+    </div>
+
+  </h1>

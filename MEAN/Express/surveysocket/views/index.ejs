@@ -1,0 +1,41 @@
+<html>
+<head>
+<title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+            var socket = io.connect();
+            // $('#button').click(function (){
+            //   socket.emit("button_clicked", {reason: "because I want to learn about sockets!"});
+            // });
+            // socket.on('server_response', function (data){
+            //   console.log('The server says: ' + data.response);
+            // });
+            $('#form').submit(function(e){
+              e.preventDefault();
+              var name = $("#name").val();
+              var location = $("#location").val();
+              var language = $("#language").val();
+              console.log(name, location, language);
+              socket.emit('new_message', {name:name, location:location, language:language});
+            })
+            socket.on('update_messages', function(data){
+              console.log(data);
+              $('#message_box').append('<p>' + data.message.name +"</p>")
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- web page goes here -->
+    <form action="" id="form">
+      <p>Your Name:<input type="text" id="name" name="name" value=""></p>
+      <p>Location<input type="text" id="location" name="location" value=""></p>
+      <p>Language:<input type="text" id="language" name="language" value=""></p>
+      <input id="button" type="submit" name="submit" value="submit">
+    </form>
+    <p id ="message_box"></p>
+</body>
+</html>

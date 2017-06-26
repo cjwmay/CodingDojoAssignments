@@ -1,0 +1,10 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <button (click)='logTimePST()'>PST</button>
+  <button (click)='logTimeMST()'>MST</button>
+  <button (click)='logTimeCST()'>CST</button>
+  <button (click)='logTimeEST()'>EST</button>
+  <button (click)='clear()'>Clear</button>
+  <h1>{{ date | date : "'today is ' MMMM d, y, H:mm:ss Z"  }}</h1>
+  <h1>{{ date | json}}</h1>
+</div>

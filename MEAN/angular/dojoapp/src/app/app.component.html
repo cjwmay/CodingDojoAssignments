@@ -1,0 +1,26 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>Dojo app</h1>
+  <h1>
+    {{title}}!!
+  </h1>
+  <h2>{{emails | json}}</h2>
+  <table>
+    <thead>
+      <th>email</th>
+      <th>importance</th>
+      <th>subject</th>
+      <th>content</th>
+    </thead>
+    <tr *ngFor='let item of emails'>
+      <td>{{item.email}}</td>
+      <td *ngIf='item.importance'>high</td>
+      <td *ngIf='!item.importance'>low</td>
+      <td>{{item.subject}}</td>
+      <td>{{item.content}}</td>
+    </tr>
+
+
+  </table>
+
+</div>

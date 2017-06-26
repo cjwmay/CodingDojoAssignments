@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokeman</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function imgselect(){
+      var src="";
+      var i=1;
+      while (i<152){
+        src="http://pokeapi.co/media/img/"+i+".png";
+        i++;
+        $(".left").append('<img id="'+i+'"src ="'+src+'">');
+      }
+
+      $(".left").on("click","img",function(){
+        // console.log(this);
+          var img= $(this).clone();
+          // console.log(img);
+
+          var number=$(this).attr("id");
+          $.get("http://pokeapi.co/api/v1/pokemon/"+number+"/", function(res) {
+                    var html_str = "";
+                    html_str += "<h4>Types</h4>";
+                    html_str += "<ul>";
+                    var html_str2 = "";
+                    html_str2 += "<h4>Height</h4>";
+                    html_str2 += "<ul>";
+                    var html_str3 = "";
+                    html_str3 += "<h4>Weight</h4>";
+                    html_str3 += "<ul>";
+                    var html_str4 = "";
+                    for(var i = 0; i < res.types.length; i++) {
+                        html_str += "<li>" + res.types[i].name + "</li>";
+                    }
+                    html_str2 += "<li>" + res.weight+ "</li>";
+                    html_str3 += "<li>" + res.height+ "</li>";
+                    html_str4 += "<h1>" + res.name+ "</h1>";
+
+                    html_str += "</ul>";
+                    html_str2 += "</ul>";
+                    html_str3 += "</ul>";
+
+                    console.log(html_str2);
+                    console.log(img[0]);
+                    $(".right").append("<div></div>").html(html_str4+"<img src='" + img[0].currentSrc + "'>"+html_str + html_str2 + html_str3);
+                }, "json");
+
+      });
+    });
+    </script>
+    <style media="screen">
+    *{
+      margin:0;
+      padding: 0;
+    }
+      .container{
+        width: 1000px;
+        margin: auto;
+
+      }
+      img{
+        width: 70px;
+      }
+      .left{
+        width: 700px;
+        display: inline-block;
+        vertical-align: middle;
+
+      }
+      .right{
+        width: 180px;
+        display: inline-block;
+        padding: 40px;
+        vertical-align: middle;
+      }
+      div{
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left" >
+    </div>
+    <div class="right">
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>Initial Power Level</h1>
+  <form (submit)="onSubmit()">
+    
+    <input type="number" name="num" min="0" max="100" [(ngModel)]="num" >
+    <input type="submit">
+  </form>
+</div>
+<app-human [mySelect] = 'select'></app-human>
+<app-saiyan [mySelect] = 'select'></app-saiyan>
+<app-saiyantwo [mySelect] = 'select'></app-saiyantwo>
+<app-saiyanthree [mySelect] = 'select'></app-saiyanthree>
+<app-saiyanfour [mySelect] = 'select'></app-saiyanfour>
+<app-super [mySelect] = 'select'></app-super>
+

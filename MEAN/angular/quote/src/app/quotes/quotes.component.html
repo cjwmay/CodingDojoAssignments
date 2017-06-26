@@ -1,0 +1,12 @@
+
+
+<div *ngFor='let item of quotes'>
+  <h3>{{item.quote}}</h3>
+  <p>--{{item.author}}</p>
+  <h3>{{item.vote}}</h3>
+  <button (click) = 'voteUp(quotes.indexOf(item))'>Vote Up</button>
+  <button (click) = 'voteDown(quotes.indexOf(item))'>Vote down</button>
+  <button (click) = 'delete(quotes.indexOf(item))'>delete</button>
+
+</div>
+

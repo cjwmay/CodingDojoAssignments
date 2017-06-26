@@ -1,0 +1,13 @@
+.box{
+  width: 50px;
+  height: 50px;
+  display: inline;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+.bar{
+  width: 550px;
+  margin: auto;
+
+}

@@ -1,0 +1,19 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+  <h5 *ngIf='users[0]'>Thank you for registering with us {{users[0].fname}}. We just sent you a confirmation email at {{users[0].email}}, and we will send all mail to, {{users[0].city}}, {{users[0].state}}, have a wonderful day!</h5>
+  <form (submit)="onSubmit()">
+    <p>First Name:<input type="text" name="fname" required minlength="2" maxlength="24" [(ngModel)]="user.fname" #fname='ngModel'>{{ fname.errors | json }}{{ fname.valid | json }}</p>
+    <p>Last Name:<input type="text" name="lname" required minlength="2" maxlength="24"[(ngModel)]="user.lname" #lname='ngModel'>{{ lname.errors | json }}{{ lname.valid | json }}</p>
+    <p>Email:<input type="text" name="email" required minlength="4" maxlength="24" [(ngModel)]="user.email" #email='ngModel'>{{ email.errors | json }}{{ email.valid | json }}</p>
+    <p>Password:<input type="text" name="password"  required minlength="10" maxlength="24" pattern="^([a-zA-Z0-9@*#]{8,15})$" #password='ngModel' [(ngModel)]="user.password"[(ngModel)]="user.password">{{ password.errors | json }}{{ password.valid | json }}</p>
+    <p>Comfirm Password:<input type="text" name="compassword" required pattern="{{password.val}}" #compassword='ngModel' [(ngModel)]="user.compassword">{{ compassword.errors | json }}{{ compassword.valid | json }}</p>
+    <p>Street Address:<input type="text" name="streetaddress" required minlength="2" maxlength="24" #streetaddress='ngModel' [(ngModel)]="user.streetaddress">{{ streetaddress.errors | json }}{{ streetaddress.valid | json }}</p>
+    <p>Unit/apt:<input type="text" name="unitapt" [(ngModel)]="user.unitapt"></p>
+    <p>City:<input type="text" name="city" [(ngModel)]="user.city"></p>
+    <p>State:<input type="text" name="state" [(ngModel)]="user.state"></p>
+    <input type="submit">
+  </form>
+</div>

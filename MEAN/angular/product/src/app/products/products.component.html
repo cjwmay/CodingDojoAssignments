@@ -1,0 +1,19 @@
+<p>
+  products works!
+</p>
+<p>{{products | json}}</p>
+<div [ngStyle]="{'display': 'inline-block','border': '1px solid black', 'width':'300px'}" *ngFor = 'let item of products'>
+  <p>Title:{{item.title}}</p>
+  <p>Price:{{item.price}}</p>
+  <p>Image:{{item.image}}</p>
+  <a [routerLink]="['/products','edit', products.indexOf(item)]">Edit</a>
+
+  <form (submit)="delete()">
+
+  <input type="hidden" name = 'id' value = 'products.indexOf(item)]' [(ngModel)]="idx">
+  <input type="submit" value = 'delete'>
+  
+  </form>
+
+  
+</div>

@@ -1,0 +1,15 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>Github Score </h1>
+  <form (submit)="getTasks()">
+  <input type="text" name="name" [(ngModel)]="user.name" required #name = "ngModel">
+  <input *ngIf='name.valid' type="submit" value="culculate git score">
+</form>
+<h1 *ngIf='tasks.followers+tasks.public_repos'>Your score is {{tasks.followers+tasks.public_repos}}</h1>
+<h3 *ngIf='tasks.followers+tasks.public_repos <= 20'>A decent start!</h3>
+<h3 *ngIf='20 < tasks.followers+tasks.public_repos && tasks.followers+tasks.public_repos <= 50'>Doing good!</h3>
+<h3 *ngIf='50 < tasks.followers+tasks.public_repos && tasks.followers+tasks.public_repos <= 100'>Great Job!</h3>
+<h3 *ngIf='100 < tasks.followers+tasks.public_repos && tasks.followers+tasks.public_repos <= 200'>gitHub Elite!</h3>
+<h3 *ngIf='200 < tasks.followers+tasks.public_repos'>WOWOWOW!</h3>
+</div>
+

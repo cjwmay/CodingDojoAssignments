@@ -1,0 +1,11 @@
+<html>
+<body>
+    <h2>List of quotes:</h2>
+    <% for (var i = 0; i < allUsers.length; i++) { %>
+        <h3>Name: <%= allUsers[i].name %></h3>
+        <h4>Quote: <%= allUsers[i].quote %></h4>
+        <h4>Time: <%= allUsers[i].createdAt %></h4>
+        <hr>
+    <% } %>
+</body>
+</html>

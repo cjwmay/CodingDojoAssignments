@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("img").on("click",function(){
+        var number=$(this).attr('number-src');
+        console.log(number);
+
+        $.get("http://www.anapioficeandfire.com/api/houses/"+number, function(res) {
+                      var headline="<h1>House Details</h1>"
+                      var name = "<h4>Name:"+res.name+"</h4>";
+                      var words= "<h4>Words:"+res.words+"</h4>";
+                      var titles="<h4>Titles:<ul>";
+                      for(var i = 0; i < res.titles.length; i++) {
+                          titles += "<li>" + res.titles[i]+ "</li>";
+                      }
+                      titles +="</ul></h4>";
+                      var html_str=headline+name+words+titles;
+                      console.log(html_str);
+                      $(".details").html(html_str);
+                  }, "json");
+      });
+
+    });
+
+    </script>
+    <style media="screen">
+    .container{
+      width: 960px;
+      margin: 0 auto;
+    }
+    h1{
+      text-align: center;
+    }
+    .gallery img{
+      width: 23%;
+display: inline-block;
+    }
+    .details{
+      width: 50%;
+      margin:auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Game of Thrones</h1>
+      <div class="gallery">
+        <img src="baratheon.png" number-src="15" alt="">
+        <img src="lannister.jpg" number-src="229"alt="">
+        <img src="stark.jpg" number-src="362" alt="">
+        <img src="targaryen.jpg" number-src="378" alt="">
+      </div>
+      <div class="details">
+
+      </div>
+
+    </div>
+  </body>
+</html>
+
+ <!-- http://www.anapioficeandfire.com/api/houses?page=1&pageSize=50 -->

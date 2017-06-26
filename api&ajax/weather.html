@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("#submit").click(function(){
+        // console.log(html_str);
+        var city=$("#txtcity").val();
+        var html_str="";
+
+        $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=4ef8f7c7d7c132789724a9a346b014b5", function(res) {
+                      var celsius = res.main.temp;
+                      var f=Math.floor(celsius* 9 / 50 + 32);
+                      html_str= "<h1>"+city+"</h1>";
+                      html_str += "<h2>Tempreture:"+f+"<h2>";
+                      console.log(html_str);
+                      $(".show").html(html_str);
+                  }, "json");
+        $('form').submit(function(){
+          return false;
+        });
+      });
+
+
+    });
+
+    </script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="" action="index.html" method="post">
+        <input type="text" id="txtcity" name="" value="San Francisco">
+        <input id="submit" type="submit" name="" value="Search Weather">
+        <div class="show">
+
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

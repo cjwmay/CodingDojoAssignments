@@ -1,0 +1,9 @@
+<h3>Create New Product</h3>
+
+<form (submit)="OnSubmit()">
+  <p>Title:<input type="text" name="title" [(ngModel)]="product.title"/></p>
+  <p>Price:<input type="text" name="price" [(ngModel)]="product.price"/></p>
+  <p>Image URL:<input type="text" name="image" [(ngModel)]="product.image"/></p>
+  <input type="submit"/>
+</form>
+<p>{{products | json}}</p>

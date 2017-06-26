@@ -20,11 +20,11 @@
         //console.log(fname);
 
         $(".right").append("<div class='card'>"+fname+lname+'<button>Click here for description</button>'+"</div>");
-        $(".card").on("click",function change(){
+        $(".card").on("click",function(){
           $(this).html(description + '<button id="b2">Back</button>');
-          $("button").on("click",function changeback(event){
+          $("button").on("click",function(event){
             event.stopPropagation();
-            console.log(this);
+            // console.log(this);
             $(this).parent().html(fname+lname+'<button>Click here for description</button>');
           });
 

@@ -1,0 +1,14 @@
+<h3>Edit Product</h3>
+<p>{{products | json}}</p>
+<form (submit)="onSubmit()">
+  <p>Title:<input type="text" name="title" [(ngModel)]="product.title"></p>
+  <p>Price:<input type="text" name="price" [(ngModel)]="product.price"></p>
+  <p>Image URL:<input type="text" name="image" [(ngModel)]="product.image"></p>
+  <input type="submit">
+  
+</form>
+<form (submit)="delete()">
+  
+  <input type="submit" value = 'delete'>
+  
+</form>

@@ -1,0 +1,9 @@
+
+<form (submit)="login()">
+	<input type="text" name="name"
+	[(ngModel)]="newUser.name"
+	minlength=2
+	#name="ngModel"
+	>
+	<input type="submit" name="">
+</form>
